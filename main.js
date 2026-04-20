@@ -188,18 +188,93 @@ resize();
 requestAnimationFrame(render);
 
 function renderDetails(data) {
+    if (data.pageTitle) {
+        document.title = data.pageTitle;
+    }
+    
+    // Hero
+    const heroContent = document.getElementById('hero-content');
+    if (heroContent && data.hero) {
+        heroContent.innerHTML = `
+            <h1 class="hero-title">${data.hero.title}</h1>
+            <p class="hero-subtitle">${data.hero.subtitle}</p>
+            <div class="social-links">
+                ${data.hero.socials.map(social => `
+                    <a href="${social.url}" target="_blank" class="social-icon" aria-label="${social.label}"><img src="${social.icon}" alt="${social.label}" class="svg-icon"></a>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    // About
+    const aboutContent = document.getElementById('about-content');
+    if (aboutContent && data.sections && data.sections.about) {
+        aboutContent.innerHTML = `
+            <h2>${data.sections.about.title}</h2>
+            <p>${data.sections.about.text}</p>
+        `;
+    }
+
+    // Education title
+    const eduTitle = document.getElementById('education-title');
+    if (eduTitle && data.sections && data.sections.education) {
+        eduTitle.textContent = data.sections.education.title;
+    }
+
+    // Projects title
+    const projTitle = document.getElementById('projects-title');
+    if (projTitle && data.sections && data.sections.projects) {
+        projTitle.textContent = data.sections.projects.title;
+    }
+
+    // Papers title
+    const paperTitle = document.getElementById('papers-title');
+    if (paperTitle && data.sections && data.sections.papers) {
+        paperTitle.textContent = data.sections.papers.title;
+    }
+
+    // Photography
+    const photographyContent = document.getElementById('photography-content');
+    if (photographyContent && data.sections && data.sections.photography) {
+        photographyContent.innerHTML = `
+            <h2>${data.sections.photography.title}</h2>
+            <div class="elfsight-app-${data.sections.photography.elfsightId}" data-elfsight-app-lazy></div>
+        `;
+        // Ensure elfsight platform.js is loaded
+        if (!document.getElementById('elfsight-script')) {
+            const script = document.createElement('script');
+            script.id = 'elfsight-script';
+            script.src = "https://elfsightcdn.com/platform.js";
+            script.async = true;
+            document.body.appendChild(script);
+        }
+    }
+
+    // Contact titles
+    const contactTitle = document.getElementById('contact-title');
+    if (contactTitle && data.sections && data.sections.contact) {
+        contactTitle.textContent = data.sections.contact.title;
+    }
+    const contactDesc = document.getElementById('contact-desc');
+    if (contactDesc && data.sections && data.sections.contact) {
+        contactDesc.textContent = data.sections.contact.description;
+    }
+
     // Build Project List
     const projectList = document.getElementById('project-list');
     if(projectList && data.projects) {
         projectList.innerHTML = data.projects.map(proj => `
             <div class="project-card">
-                ${proj.imageUrl ? `<img src="${proj.imageUrl}" alt="${proj.title} Preview">` : ''}
+                ${proj.imageUrl ? `${proj.redirectUrl ? `<a href="${proj.redirectUrl}" target="_blank">` : ''}<img src="${proj.imageUrl}" alt="${proj.title} Preview">${proj.redirectUrl ? `</a>` : ''}` : ''}
                 <div class="project-content">
-                    ${proj.title ? `<h3>${proj.title}</h3>` : ''}
+                    ${proj.title ? `<h3>${proj.redirectUrl ? `<a href="${proj.redirectUrl}" target="_blank" style="color:inherit;text-decoration:none;">${proj.title}</a>` : proj.title}</h3>` : ''}
                     ${proj.collaborators && proj.collaborators.length > 0 ? `<div class="collaborators">with ${proj.collaborators.map(c => `<a href="${c.url}" target="_blank" class="collaborator-link">${c.name}</a>`).join(', ')}</div>` : ''}
                     ${proj.description ? `<p class="project-desc">${proj.description}</p>` : ''}
                     ${proj.tags && proj.tags.length > 0 ? `<div class="tag-container">${proj.tags.map(t => `<span class="tag-bubble">${t}</span>`).join('')}</div>` : ''}
-                    ${(proj.hasPaper && proj.paperUrl) ? `<a href="${proj.paperUrl}" target="_blank" class="paper-link"><img src="resources/paper.svg" class="svg-icon" style="width:16px;height:16px" alt="Paper"> Read Paper</a>` : ''}
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                        ${proj.redirectUrl ? `<a href="${proj.redirectUrl}" target="_blank" class="paper-link">Visit Project</a>` : ''}
+                        ${(proj.hasPaper && proj.paperUrl) ? `<a href="${proj.paperUrl}" target="_blank" class="paper-link"><img src="resources/paper.svg" class="svg-icon" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;" alt="Paper"> Read Paper</a>` : ''}
+                    </div>
                 </div>
             </div>
         `).join('');

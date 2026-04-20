@@ -3,8 +3,8 @@
     --bg-base: #030305; /* Near black */
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --accent-color: #f97316; /* Sunrise/Sunset orange */
-    --accent-hover: #fb923c;
+    --accent-color: #3b82f6; /* Blue highlight */
+    --accent-hover: #60a5fa;
     --glass-bg: rgba(5, 5, 10, 0.75); /* Much darker glass */
     --glass-border: rgba(255, 255, 255, 0.05);
     
@@ -132,7 +132,7 @@ body {
     color: #fff;
     transform: translateY(-3px) scale(1.05);
     border-color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 /* General Sections */

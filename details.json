@@ -1,38 +1,85 @@
 {
+  "pageTitle": "Peter M. Bowman - Portfolio",
+  "hero": {
+    "title": "Peter M. Bowman",
+    "subtitle": "Mathematician & Developer & Photographer",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/peter-bowman-03424822a/",
+        "icon": "resources/linkedin.svg"
+      },
+      {
+        "label": "Photography",
+        "url": "https://instagram.com/will_it_rain_photos",
+        "icon": "resources/instagram.svg"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/piderking",
+        "icon": "resources/github.svg"
+      }
+    ]
+  },
+  "sections": {
+    "about": {
+      "title": "About Me",
+      "text": "My name is Peter Bowman and I am a 19-year-old student at Cal Poly San Luis Obispo pursuing a dual degree in Mathematics and Computer Science. I am deeply passionate about exploring the intersection of these two fields and am actively engaged in projects that allow me to push the boundaries of what is possible. My work often involves complex problem-solving, innovative thinking, and a relentless drive to create something meaningful. I am also an avid photographer, finding inspiration in capturing the world around me."
+    },
+    "education": {
+      "title": "Education"
+    },
+    "projects": {
+      "title": "Selected Works"
+    },
+    "papers": {
+      "title": "Publications & Papers"
+    },
+    "photography": {
+      "title": "Latest Photography",
+      "elfsightId": "7f003866-70fa-4668-81d1-c0458ad52153"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "description": "Interested in working together or just want to say hi? Feel free to reach out."
+    }
+  },
   "projects": [
     {
-      "title": "Procedural Mountain Generation",
-      "imageUrl": "resources/project-placeholder.jpg",
-      "description": "A high-performance JavaScript canvas engine generating accurate 2D lighting and dynamic craggy landscapes.",
-      "collaborators": [
-        {
-          "name": "Jane Doe",
-          "url": "https://github.com/janedoe"
-        }
-      ],
+      "title": "RML",
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "description": "A functional DSL for linear algebra.",
+      "redirectUrl": "https://github.com/piderking/rml",
+      "collaborators": [],
       "tags": [
-        "JavaScript",
-        "HTML5 Canvas",
-        "Algorithms"
+        "Mathematics",
+        "Rust"
       ],
       "hasPaper": true,
-      "paperUrl": "resources/procedural_generation_paper.pdf"
-    }
-  ],
-  "papers": [
+      "paperUrl": "resources/mtx.pdf"
+    },
     {
-      "title": "An Analysis of Procedural Generation Algorithms in 2D Web Environments",
-      "authors": "Peter M. Bowman, Jane Doe",
-      "conference": "SIGGRAPH 2026",
-      "url": "resources/procedural_generation_paper.pdf"
+      "title": "RML Tensor Data",
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "description": "Tensor data structures for training neural networks, with strong and vairable types.",
+      "redirectUrl": "https://github.com/piderking/rml/tree/master/rml-data",
+      "collaborators": [],
+      "tags": [
+        "Tensors",
+        "Data",
+        "Rust"
+      ],
+      "hasPaper": false,
+      "paperUrl": ""
     }
   ],
+  "papers": [],
   "education": [
     {
       "school": "California Polytechnic State University",
       "major": "Mathematics / Computer Science",
       "grade": "Freshman",
-      "units": 20,
+      "units": 0,
       "logoUrl": "resources/calpoly.png"
     },
     {
@@ -40,7 +87,7 @@
       "major": "Undeclared",
       "grade": "Dual Enrollment",
       "units": 26,
-      "logoUrl": "resources/calpoly.png"
+      "logoUrl": "resources/flc.png"
     }
   ],
   "contact": [
