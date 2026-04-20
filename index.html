@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter M. Bowman - Portfolio</title>
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Mountain & Lighting Animation -->
+    <canvas id="mountainCanvas"></canvas>
+
+    <main class="content-wrapper">
+        <section id="hero" class="hero-section glass-panel">
+            <div class="hero-content">
+                <h1 class="hero-title">Peter M. Bowman</h1>
+                <p class="hero-subtitle">Creative Visionary & Developer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/peter-bowman-03424822a/" target="_blank" class="social-icon" aria-label="LinkedIn"><img src="resources/linkedin.svg" alt="LinkedIn" class="svg-icon"></a>
+                    <a href="https://instagram.com/will_it_rain_photos" target="_blank" class="social-icon" aria-label="Photography"><img src="resources/instagram.svg" alt="Instagram" class="svg-icon"></a>
+                    <a href="https://github.com/piderking" target="_blank" class="social-icon" aria-label="GitHub"><img src="resources/github.svg" alt="GitHub" class="svg-icon"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section glass-panel">
+            <h2>About Me</h2>
+            <p>I am a passionate professional blending technical expertise with artistic vision. My work spans across software development and photography, finding harmony in both structured logic and creative expression. The mountains in the background are procedurally generated, creating a unique landscape every time you visit.</p>
+        </section>
+
+        <section id="education" class="content-section glass-panel">
+            <h2>Education</h2>
+            <div id="education-list">
+                <p>Loading education info...</p>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section glass-panel">
+            <h2>Selected Works</h2>
+            <div id="project-list" class="project-grid">
+                <p>Loading projects...</p>
+            </div>
+        </section>
+
+        <section id="papers" class="content-section glass-panel">
+            <h2>Publications & Papers</h2>
+            <div id="paper-list" class="paper-list">
+                <p>Loading papers...</p>
+            </div>
+        </section>
+
+        <div class="split-row">
+            <section id="photography" class="content-section glass-panel">
+                <h2>Latest Photography</h2>
+                <!-- Elfsight Instagram Feed | Will It Rain Photos -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-7f003866-70fa-4668-81d1-c0458ad52153" data-elfsight-app-lazy></div>
+            </section>
+
+            <section id="contact" class="content-section glass-panel">
+                <h2>Get In Touch</h2>
+                <p class="section-desc">Interested in working together or just want to say hi? Feel free to reach out.</p>
+                <div id="contact-list" class="contact-info">
+                    <p>Loading contact info...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
