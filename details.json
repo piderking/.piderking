@@ -18,13 +18,18 @@
         "label": "GitHub",
         "url": "https://github.com/piderking",
         "icon": "resources/github.svg"
+      },
+      {
+        "label": "Kaggle",
+        "url": "https://www.kaggle.com/datasets/peterbowman/",
+        "icon": "resources/kaggle.svg"
       }
     ]
   },
   "sections": {
     "about": {
       "title": "About Me",
-      "text": "My name is Peter Bowman and I am a 19-year-old student at Cal Poly San Luis Obispo pursuing a dual degree in Mathematics and Computer Science. I am deeply passionate about exploring the intersection of these two fields and am actively engaged in projects that allow me to push the boundaries of what is possible. My work often involves complex problem-solving, innovative thinking, and a relentless drive to create something meaningful. I am also an avid photographer, finding inspiration in capturing the world around me."
+      "text": "My name is Peter Bowman and I am a 18-year-old student at Cal Poly San Luis Obispo pursuing a dual degree in Mathematics and Computer Science. I am deeply passionate about exploring the intersection of these two fields. I work on projects involving computational mathematics, machine learning and big data. I am also an avid photographer, finding inspiration in capturing the world around me."
     },
     "education": {
       "title": "Education"
@@ -46,27 +51,45 @@
   },
   "projects": [
     {
-      "title": "RML",
-      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-      "description": "A functional DSL for linear algebra.",
-      "redirectUrl": "https://github.com/piderking/rml",
-      "collaborators": [],
-      "tags": [
-        "Mathematics",
-        "Rust"
-      ],
-      "hasPaper": true,
-      "paperUrl": "resources/mtx.pdf"
-    },
-    {
       "title": "RML Tensor Data",
       "imageUrl": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "description": "Tensor data structures for training neural networks, with strong and vairable types.",
       "redirectUrl": "https://github.com/piderking/rml/tree/master/rml-data",
       "collaborators": [],
       "tags": [
+        "Released",
         "Tensors",
         "Data",
+        "Rust"
+      ],
+      "hasPaper": false,
+      "paperUrl": ""
+    },
+    {
+      "title": "Crypto Data",
+      "imageUrl": "",
+      "description": "Created a dataset that provides high-frequency 1-minute (1m) OHLCV (Open, High, Low, Close, Volume) data for the top 20 most liquid cryptocurrency pairs on the Binance Spot exchange.",
+      "redirectUrl": "https://www.kaggle.com/datasets/peterbowman/crypto-data/data",
+      "collaborators": [],
+      "tags": [
+        "Completed",
+        "Crypto",
+        "Data",
+        "Python"
+      ],
+      "hasPaper": false,
+      "paperUrl": ""
+    },
+    {
+      "title": "MTX",
+      "imageUrl": "",
+      "description": "Translate binary program into mathematical expressions using Rust.",
+      "redirectUrl": "https://gtihub.com/piderking/mtx",
+      "collaborators": [],
+      "tags": [
+        "In Progress",
+        "Compiler",
+        "Mathematics",
         "Rust"
       ],
       "hasPaper": false,
@@ -117,9 +140,15 @@
     },
     {
       "name": "GitHub",
-      "info": "piderking",
+      "info": "Github",
       "icon": "resources/github.svg",
       "link": "https://github.com/piderking"
+    },
+    {
+      "name": "Kaggle",
+      "info": "Kaggle",
+      "icon": "resources/kaggle.svg",
+      "link": "https://www.kaggle.com/datasets/peterbowman/"
     }
   ]
 }
